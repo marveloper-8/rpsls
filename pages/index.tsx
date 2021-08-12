@@ -200,7 +200,7 @@ export default function Home() {
 
   useEffect(() => {
     if(window.matchMedia("(max-width: 700px)").matches){
-      setFaceoffImage(100)
+      setFaceoffImage(50)
     }
   }, [])
   
