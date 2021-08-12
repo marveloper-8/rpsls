@@ -241,31 +241,34 @@ export default function Home() {
             })}
           </div>
         </div>
-        <div className={styles.actions}>
-          {opponentSelection()}
-          <span className={game ? `${styles.vs} ${styles.vs_active}` : `${styles.vs}`}>
-            <Image src="/icons/vs.svg" alt="scissors" width={50} height={50} />
-          </span>
-          <span
-            className={game
-              ? `${styles.actions_item} ${styles.actions_item_right} ${styles.actions_item_right_active}`
-              : `${styles.actions_item} ${styles.actions_item_right}`
-            }
-          >
-            <span className={`fs-20 ${styles.player_name}`}><b>YOU</b></span>
-            <br />
-            <Image src={`/icons/${selection}.svg`} alt={selection} width={faceoffImage} height={faceoffImage} />
-            <br />
-            <span className={`font-1 fs-35 ${styles.actions_text}`}>{selection}</span>
-          </span>
-          <div className={game ? `${styles.start_over} ${styles.start_over_active}` : styles.start_over} onClick={() => setGame(false)}>
-            <div>START OVER! <Image src={`/icons/cursor.svg`} alt={selection} width={15} height={15} /></div>
-          </div>
-        </div>
+        <div className={game ? `${styles.actions_active} ${styles.actions}` : styles.actions}>
+          <div>
+              {opponentSelection()}
+              <span className={game ? `${styles.vs} ${styles.vs_active}` : `${styles.vs}`}>
+                <Image src="/icons/vs.svg" alt="scissors" width={50} height={50} />
+              </span>
+              <span
+                className={game
+                  ? `${styles.actions_item} ${styles.actions_item_right} ${styles.actions_item_right_active}`
+                  : `${styles.actions_item} ${styles.actions_item_right}`
+                }
+              >
+                <span className={`fs-20 ${styles.player_name}`}><b>YOU</b></span>
+                <br />
+                <Image src={`/icons/${selection}.svg`} alt={selection} width={faceoffImage} height={faceoffImage} />
+                <br />
+                <span className={`font-1 fs-35 ${styles.actions_text}`}>{selection}</span>
+              </span>
+              <div className={game ? `${styles.start_over} ${styles.start_over_active}` : styles.start_over} onClick={() => setGame(false)}>
+                <div>START OVER! <Image src={`/icons/cursor.svg`} alt={selection} width={15} height={15} /></div>
+              </div>
+            </div>
 
-        <div className={result ? `${styles.popup} ${styles.popup_active}` : styles.popup}>
-          {resultComponent()}
-        </div>
+            <div className={result ? `${styles.popup} ${styles.popup_active}` : styles.popup}>
+              {resultComponent()}
+            </div>
+          </div>
+          
       </main>
 
       <footer className={styles.footer}>
