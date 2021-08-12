@@ -273,7 +273,10 @@ export default function Home() {
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>, */}
+        <div>
           Resources gotten from <a href="https://www.flaticon.com" className="link" target="_blank" rel="noopener noreferrer"> FreePik, </a><a href="https://www.freepik.com" className="link" target="_blank" rel="noopener noreferrer">FlatIcon,</a> and <a href="https://fonts.google.com" className="link" target="_blank" rel="noopener noreferrer">Google Fonts</a>
+        </div>
+          
       </footer>
     </div>
   )
